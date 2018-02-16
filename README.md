@@ -1,5 +1,8 @@
 # atypik-house
 
+Install : 
+* <code> docker exec -it service_php composer install </code>
+
 Déployer l'environnement Docker :
 
 * <code> docker-compose up -d </code>
