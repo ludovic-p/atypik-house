@@ -7,6 +7,8 @@ services:
           - 80:80
       networks:
           - net_atypik
+      volumes:
+          - ../app:/var/www/html
 
   php:
       container_name: service_php
@@ -16,12 +18,7 @@ services:
       networks:
           - net_atypik
       volumes:
-          - ../app/src:/var/www/html/src
-          - ../app/web:/var/www/html/web
-          - ../app/vendor:/var/www/html/vendor
-          - ../app/app:/var/www/html/app
-          - ../app/var/cache:/var/www/cache
-          - ../app/var/logs:/var/www/logs
+          - ../app:/var/www/html
 
   mariadb:
       image: mariadb:latest

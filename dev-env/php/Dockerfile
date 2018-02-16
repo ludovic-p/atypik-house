@@ -28,7 +28,7 @@ RUN chown www-data:www-data /var/www/logs/ /var/www/cache/
 RUN usermod -u 1000 www-data
 
 #~~~ CACHE CLEAR ~~~#
-RUN echo "php /var/www/html/app/console cache:clear" > /var/www/cacheClear.sh
+RUN echo "php /var/www/html/bin/console cache:clear" > /var/www/cacheClear.sh
 RUN echo "chmod -R 777 /var/www/logs/ /var/www/cache/" >> /var/www/cacheClear.sh
 RUN echo "chown -R www-data:www-data /var/www/logs/ /var/www/cache/" >> /var/www/cacheClear.sh
 RUN echo "echo 'Permissions ajoutés sur les répertoires logs et cache'" >> /var/www/cacheClear.sh
