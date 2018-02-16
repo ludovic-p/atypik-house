@@ -21,7 +21,7 @@ Voir les logs d'un container et suivre son état en temps réel :
 * <code> docker-compose logs -f [SERVICE_NAME] </code>
 
 Install : 
-
+* <code> docker exec -it service_php composer install </code>
 
 Clear cache : 
 * <code> docker exec -it service_php bash -c ../cacheClear.sh </code>
