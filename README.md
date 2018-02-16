@@ -1,8 +1,5 @@
 # atypik-house
 
-Install : 
-* <code> docker exec -it service_php composer install </code>
-
 Déployer l'environnement Docker :
 
 * <code> docker-compose up -d </code>
@@ -22,3 +19,9 @@ Entrer dans un container en bash :
 Voir les logs d'un container et suivre son état en temps réel :
 
 * <code> docker-compose logs -f [SERVICE_NAME] </code>
+
+Install : 
+
+
+Clear cache : 
+* <code> docker exec -it service_php bash -c ../cacheClear.sh </code>
