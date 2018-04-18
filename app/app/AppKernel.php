@@ -16,13 +16,37 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new AppBundle\AppBundle(),
+
+            #Assetic Bundle
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+
+            #API REST Bundle
+            new FOS\RestBundle\FOSRestBundle(),
+
+            #User Bundles
+            new FOS\UserBundle\FOSUserBundle(),
+
+            #Media Manager Bundle
+            new Sonata\MediaBundle\SonataMediaBundle(),
+            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
+
+            #Serializer
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+
+            #AtypikHouse Bundles
+            new ToolsBundle\ToolsBundle(),
+            new UserBundle\UserBundle(),
+            new HousingBundle\HousingBundle(),
+            new PaymentBundle\PaymentBundle(),
+            new AtypikHouseBundle\AtypikHouseBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
+            $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
 
             if ('dev' === $this->getEnvironment()) {
                 $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();

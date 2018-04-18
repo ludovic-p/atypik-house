@@ -1,3 +1,32 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+atypik_house:
+    resource: "@AtypikHouseBundle/Resources/config/routing.yml"
+    prefix:   /
+
+payment:
+    resource: "@PaymentBundle/Resources/config/routing.yml"
+    prefix:   /payment
+
+housing:
+    resource: "@HousingBundle/Resources/config/routing.yml"
+    prefix:   /housing
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /user
+
+tools:
+    resource: "@ToolsBundle/Resources/config/routing.yml"
+    prefix:   /tools
+
+# FOS Routing
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+# Sonata Media Routing
+gallery:
+    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'
+    prefix: /media/gallery
+
+media:
+    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
+    prefix: /media
