@@ -9,6 +9,6 @@ class DefaultController extends Controller
     public function indexAction()
     {
         return $this->render('AtypikHouseBundle:Default:index.html.twig');
-        echo 'zefe';;;
+        echo 'zefe';;;;
     }
 }
