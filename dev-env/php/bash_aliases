@@ -1,3 +1,0 @@
-alias ll='ls -alF'
-
-alias phpunit='php casper/vendor/phpunit/phpunit/phpunit'

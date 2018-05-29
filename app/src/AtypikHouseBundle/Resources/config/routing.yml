@@ -1,3 +1,0 @@
-atypik_house_homepage:
-    path:     /
-    defaults: { _controller: AtypikHouseBundle:Default:index }
